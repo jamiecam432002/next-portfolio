@@ -1,0 +1,14 @@
+.headerLink {
+	z-index: 2;
+}
+.headerLink img {
+	border-radius: 50%;
+	width: 20rem;
+	height: 20rem;
+}
+@media screen and (min-width: 800px) {
+	.headerLink img {
+		width: 24rem;
+		height: 24rem;
+	}
+}

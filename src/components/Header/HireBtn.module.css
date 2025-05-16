@@ -1,0 +1,16 @@
+.hireBtnEl {
+	display: block;
+	height: 4rem;
+	width: 11.2rem;
+	background-color: #a0b2a6;
+	border-bottom-left-radius: 0.2rem;
+	border-bottom-right-radius: 0.2rem;
+	font-size: 2rem;
+	color: #051f44;
+	transform: rotate(90deg);
+	position: absolute;
+	bottom: 100px;
+	right: -35px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
