@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import { Roboto } from 'next/font/google';
-import SkillList from '@/components/SkillList/SkillList';
+import SkillList from '@/src/components/SkillList/SkillList/SkillList';
+import { getAuthenticatedAppForUser } from '../lib/firebase/serverApp';
+import { getSkills } from '@/src/lib/firebase/firestore';
+import { getFirestore } from 'firebase/firestore';
+import SkillListItem from '../components/SkillList/SkillListItem/SkillListItem';
+
+export const dynamic = 'force-dynamic';
 
 const roboto = Roboto({
 	display: 'swap',
@@ -8,7 +14,9 @@ const roboto = Roboto({
 	weight: ['400'],
 });
 
-export default function Home() {
+export default async function Home() {
+	const { firebaseServerApp } = await getAuthenticatedAppForUser();
+	const skills = await getSkills(getFirestore(firebaseServerApp));
 	return (
 		<>
 			<h1>
@@ -27,7 +35,13 @@ export default function Home() {
 				If you are looking for a brief summary of the skills I hang my hat on,
 				look no further:
 			</h3>
-			<SkillList />
+			<SkillList initialSkills={skills}>
+				{skills &&
+					skills.map((skill) => (
+						<SkillListItem key={skill.title} skill={skill} />
+					))}
+				;
+			</SkillList>
 		</>
 	);
 }

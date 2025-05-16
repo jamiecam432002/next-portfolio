@@ -1,6 +1,8 @@
 import { Lato } from 'next/font/google';
 import './globals.css';
-import Header from '@/components/Header/Header';
+import Header from '@/src/components/Header/Header';
+import { getAuthenticatedAppForUser } from '../lib/firebase/serverApp';
+export const dynamic = 'force-dynamic';
 
 const lato = Lato({
 	display: 'swap',
@@ -17,12 +19,14 @@ export const metadata = {
 		'The online web portfolio of full-stack, React/Next developer James A Cameron',
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+	const { currentUser } = await getAuthenticatedAppForUser();
+
 	return (
 		<html lang='en'>
 			<body className={lato.className}>
 				<div className='container'>
-					<Header />
+					<Header initialUser={currentUser?.toJSON()} />
 					<main>{children}</main>
 				</div>
 			</body>
