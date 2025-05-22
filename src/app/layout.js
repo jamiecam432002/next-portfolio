@@ -12,11 +12,11 @@ const lato = Lato({
 
 export const metadata = {
 	title: {
-		template: '%s | James A Cameron',
-		default: 'The web portfolio of James A Cameron',
+		template: '%s | Jamie A Cameron',
+		default: 'The web portfolio of Jamie A Cameron',
 	},
 	description:
-		'The online web portfolio of full-stack, React/Next developer James A Cameron',
+		'The online web portfolio of full-stack, React/Next developer Jamie A Cameron',
 };
 
 export default async function RootLayout({ children }) {
