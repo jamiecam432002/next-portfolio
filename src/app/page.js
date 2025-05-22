@@ -21,7 +21,7 @@ export default async function Home() {
 			<h1>
 				Welcome to the Web Portfolio of <br />
 				React/NextJS/Angular developer
-				<br /> James A Cameron
+				<br /> Jamie A Cameron
 			</h1>
 			<h2 className={roboto.className}>
 				I am a web developer in the Guelph/KW area who specializes in developing
