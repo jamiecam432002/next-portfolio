@@ -13,4 +13,6 @@
 	right: -35px;
 	text-transform: uppercase;
 	cursor: pointer;
+	text-align: center;
+	line-height: 4rem;
 }

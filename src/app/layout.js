@@ -1,6 +1,6 @@
 import { Lato } from 'next/font/google';
 import './globals.css';
-import Header from '@/src/components/Header/Header';
+import Header from '@/src/ui/components/Header/Header';
 import { getAuthenticatedAppForUser } from '../lib/firebase/serverApp';
 export const dynamic = 'force-dynamic';
 

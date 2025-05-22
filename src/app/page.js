@@ -1,10 +1,9 @@
-import Image from 'next/image';
 import { Roboto } from 'next/font/google';
-import SkillList from '@/src/components/SkillList/SkillList/SkillList';
+import SkillList from '@/src/ui/components/SkillList/SkillList/SkillList';
 import { getAuthenticatedAppForUser } from '../lib/firebase/serverApp';
 import { getSkills } from '@/src/lib/firebase/firestore';
 import { getFirestore } from 'firebase/firestore';
-import SkillListItem from '../components/SkillList/SkillListItem/SkillListItem';
+import SkillListItem from '../ui/components/SkillList/SkillListItem/SkillListItem';
 
 export const dynamic = 'force-dynamic';
 
