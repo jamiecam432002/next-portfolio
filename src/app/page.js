@@ -18,11 +18,11 @@ export default async function Home() {
 				<br /> Jamie A Cameron
 			</h1>
 			<h2 className={roboto.className}>
-				I am a web developer in the Guelph/KW area who specializes in developing
-				responsive, lightweight websites & apps that utilize cutting-edge CSS,
-				highly semantic HTML, and look great on any device or browser. My
-				particular interest is in Angular Apps (8+) using a combination of
-				server side rendering, lazy-loading and Angular Material.
+				I am a fullstack javascript developer in the Guelph/KW area who
+				specializes in developing responsive, lightweight websites & apps using
+				Next.js and React. I build apps using a combination of server and client
+				side rendering to maximize performance in the browser, regardless of
+				device or environment.
 			</h2>
 			<h3>
 				If you are looking for a brief summary of the skills I hang my hat on,
