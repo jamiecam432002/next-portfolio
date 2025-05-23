@@ -56,7 +56,7 @@ export default function Header({ initialUser }) {
 
 				<HireBtn />
 			</header>
-			<header>
+			<div className='hidden'>
 				<Link href='/' className='logo'>
 					<img src='/friendly-eats.svg' alt='FriendlyEats' />
 					Friendly Eats
@@ -95,7 +95,7 @@ export default function Header({ initialUser }) {
 						</a>
 					</div>
 				)}
-			</header>
+			</div>
 		</>
 	);
 }
