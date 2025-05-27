@@ -7,10 +7,10 @@ export const dynamic = 'force-dynamic';
 export const metadata = {
 	title: {
 		template: '%s | Jamie A Cameron',
-		default: 'The web portfolio of Jamie A Cameron',
+		default: 'The web portfolio of fullstack developer Jamie A Cameron',
 	},
 	description:
-		'The online web portfolio of full-stack, React/Next developer Jamie A Cameron',
+		'The online web portfolio of full-stack, React/Next.js developer Jamie A Cameron',
 };
 
 export default async function RootLayout({ children }) {

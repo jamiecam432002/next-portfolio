@@ -6,8 +6,8 @@ export default async function Home() {
 	return (
 		<>
 			<h1>
-				Welcome to the Web Portfolio of <br />
-				React/NextJS/Angular developer
+				Welcome to the Web Portfolio <br />
+				of Fullstack Developer
 				<br /> Jamie A Cameron
 			</h1>
 			<h2>

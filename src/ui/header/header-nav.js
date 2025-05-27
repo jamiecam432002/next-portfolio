@@ -10,6 +10,11 @@ export default function HeaderNav() {
 						Contact Me
 					</Link>
 				</li>
+				<li className={styles.headerNavItem}>
+					<Link className={styles.headerNavLink} href='/secondary-skills'>
+						Secondary Skills
+					</Link>
+				</li>
 			</ul>
 		</nav>
 	);
