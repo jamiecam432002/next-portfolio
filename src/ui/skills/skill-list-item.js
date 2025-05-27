@@ -1,5 +1,5 @@
-import SkillIcon from '../SkillIcon/SkillIcon';
-import styles from './SkillListItem.module.css';
+import SkillIcon from './skill-icon';
+import styles from './skill-list-item.module.css';
 
 export default function SkillListItem({ skill }) {
 	return (

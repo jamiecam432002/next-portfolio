@@ -8,10 +8,10 @@ import {
 } from '@/src/lib/firebase/auth.js';
 import { setCookie, deleteCookie } from 'cookies-next';
 
-import styles from './Header.module.css';
-import HeaderLogo from './HeaderLogo/HeaderLogo';
-import HeaderNav from './HeaderNav/HeaderNav';
-import HireBtn from './HireBtn/HireBtn';
+import styles from './header.module.css';
+import HeaderLogo from './header-logo';
+import HeaderNav from './header-nav';
+import HireBtn from './hire-btn';
 
 function useUserSession(initialUser) {
 	useEffect(() => {

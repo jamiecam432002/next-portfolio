@@ -1,7 +1,5 @@
-'use client';
-
 import Link from 'next/link';
-import styles from './HireBtn.module.css';
+import styles from './hire-btn.module.css';
 
 export default function HireBtn() {
 	return (

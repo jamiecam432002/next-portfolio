@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './HeaderLogo.module.css';
+import styles from './header-logo.module.css';
 
 export default function HeaderLogo() {
 	return (

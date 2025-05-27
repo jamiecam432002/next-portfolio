@@ -1,14 +1,8 @@
-import { Lato } from 'next/font/google';
 import './globals.css';
-import Header from '@/src/ui/components/Header/Header';
+import Header from '@/src/ui/header/header';
 import { getAuthenticatedAppForUser } from '../lib/firebase/serverApp';
+import { lato } from '@/src/ui/fonts';
 export const dynamic = 'force-dynamic';
-
-const lato = Lato({
-	display: 'swap',
-	subsets: ['latin'],
-	weight: ['400', '700'],
-});
 
 export const metadata = {
 	title: {

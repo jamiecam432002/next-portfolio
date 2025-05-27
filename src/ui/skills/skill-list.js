@@ -1,7 +1,7 @@
 import { getAuthenticatedAppForUser } from '@/src/lib/firebase/serverApp';
-import styles from './SkillList.module.css';
+import styles from './skill-list.module.css';
 import { getSkills } from '@/src/lib/firebase/firestore';
-import SkillListItem from '../SkillListItem/SkillListItem';
+import SkillListItem from './skill-list-item';
 import { getFirestore } from 'firebase/firestore';
 
 export default async function SkillList({ type }) {
