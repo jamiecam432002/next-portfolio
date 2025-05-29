@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<>
+		<main>
 			<h1>My Secondary Skills</h1>
 			<h3>
 				In more than a decade I have worn a number of hats and developed a very
@@ -20,6 +20,6 @@ export default function Page() {
 			</h3>
 
 			<SkillList type='secondary' />
-		</>
+		</main>
 	);
 }

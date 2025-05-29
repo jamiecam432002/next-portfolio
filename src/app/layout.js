@@ -21,7 +21,7 @@ export default async function RootLayout({ children }) {
 			<body className={lato.className}>
 				<div className='container'>
 					<Header initialUser={currentUser?.toJSON()} />
-					<main>{children}</main>
+					{children}
 				</div>
 			</body>
 		</html>

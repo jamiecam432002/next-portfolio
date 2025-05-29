@@ -4,7 +4,7 @@ export const dynamic = 'force-dynamic';
 
 export default async function Home() {
 	return (
-		<>
+		<main>
 			<h1>
 				Welcome to the Web Portfolio <br />
 				of Fullstack Developer
@@ -22,6 +22,6 @@ export default async function Home() {
 				look no further:
 			</h3>
 			<SkillList type='primary' />
-		</>
+		</main>
 	);
 }

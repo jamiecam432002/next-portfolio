@@ -1,0 +1,13 @@
+.forkifyRecipe {
+	flex: 1 1 100%;
+	max-width: 100%;
+	background-color: #f9f5f3;
+	padding: 3rem 2.4rem;
+}
+@media screen and (min-width: 1000px) {
+	.forkifyRecipe {
+		flex: 1 1 55%;
+		max-width: 55%;
+		min-height: 60rem;
+	}
+}

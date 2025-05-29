@@ -73,3 +73,24 @@ h3 {
 		line-height: 9rem;
 	}
 }
+
+.forkify-content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.forkify-content h2 {
+	font-weight: 600;
+	font-size: 3.2rem;
+	color: #f59a83;
+	text-transform: uppercase;
+	text-align: center;
+	transform: skewY(-3deg);
+	text-shadow: 1px 1px 1px #000;
+	margin: 0 0 4.8rem 0;
+}
+@media screen and (min-width: 1200px) {
+	.forkify-content {
+		flex-wrap: nowrap;
+	}
+}
