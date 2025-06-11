@@ -1,0 +1,24 @@
+.forkify__likes {
+	flex: 1 1 65%;
+	max-width: 65%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+	align-self: stretch;
+	padding: 0 !important;
+	order: 2;
+}
+@media screen and (min-width: 768px) {
+	.forkify__likes {
+		flex: 1 1 10%;
+		max-width: 10%;
+		order: unset;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.forkify__likes {
+		flex: 1 1 25%;
+		max-width: 25%;
+	}
+}

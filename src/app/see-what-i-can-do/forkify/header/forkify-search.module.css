@@ -1,0 +1,69 @@
+.forkify__search {
+	flex: 1 1 100%;
+	max-width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	order: 3;
+	margin-top: 1.5rem;
+}
+.forkify__search__form {
+	background-color: #fff;
+	border-radius: 16rem;
+	display: flex;
+	align-items: center;
+	padding-left: 0;
+	transition: all 0.3s;
+	width: 100%;
+	position: relative;
+}
+.forkify__search__field {
+	width: 100%;
+	display: inline-block;
+	padding: 0.9rem 1.5rem 1rem 1.5rem;
+	margin: 0;
+	font-size: 1.6rem;
+	font-weight: 100;
+	outline: 0;
+}
+.forkify__search__btn {
+	position: absolute;
+	right: 0;
+}
+@media screen and (min-width: 768px) {
+	.forkify__search {
+		flex: 1 1 70%;
+		max-width: 70%;
+		order: unset;
+		margin-top: 0;
+	}
+	.forkify__search__form {
+		margin-right: 1.6rem;
+		width: auto;
+		padding-left: 3.2rem;
+	}
+	.forkify__search__field {
+		padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+		font-size: 1.76rem;
+		line-height: normal;
+		width: 30rem;
+		font-weight: 300;
+		color: #000;
+	}
+	.forkify__search__field::placeholder {
+		opacity: 0.8;
+	}
+	.forkify__search__btn {
+		position: static;
+		right: auto;
+		width: 13.9rem;
+	}
+	.forkify__search__btn button {
+		width: 100%;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.forkify__search {
+		flex: 1 1 50%;
+		max-width: 50%;
+	}
+}

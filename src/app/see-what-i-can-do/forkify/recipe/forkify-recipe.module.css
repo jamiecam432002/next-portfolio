@@ -1,0 +1,116 @@
+.forkifyRecipeContainer {
+	flex: 1 1 100%;
+	max-width: 100%;
+	background-color: #f9f5f3;
+	padding-top: 3rem;
+}
+.forkifyNothingCooking {
+	font-size: 2.2rem;
+	color: #000;
+	margin-bottom: 6rem;
+	padding: 0 2rem;
+}
+/* RECIPE INFO SECTION */
+.forkifyRecipe__preview {
+	height: 32rem;
+	position: relative;
+	margin: 0;
+}
+.forkifyRecipe__preview:before {
+	content: '';
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+	opacity: 0.6;
+}
+.forkifyRecipe__preview img {
+	width: 100%;
+	display: block;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.forkifyRecipe__title {
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translate(-50%, 20%) skewY(-6deg);
+	color: #fff;
+	font-weight: 700;
+	font-size: 2.6rem;
+	text-transform: uppercase;
+	width: 70%;
+	line-height: 2.9;
+	text-align: center;
+}
+.forkifyRecipe__title span {
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	padding: 1em;
+	background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+}
+
+/* RECIPE DETAILS SECTION */
+.forkifyRecipe__details {
+	display: flex;
+	align-items: center;
+	padding: 6.4rem 4rem 3.2rem;
+	flex-wrap: wrap;
+	position: relative;
+}
+.forkifyRecipe__info {
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+}
+.forkifyRecipe__info:not(:last-child) {
+	flex: 1 1 100%;
+	margin-bottom: 2rem;
+}
+.forkifyRecipe__info svg {
+	height: 2.1rem;
+	width: 2.1rem;
+	fill: #f59a83;
+	margin-right: 1.12rem;
+}
+.forkifyRecipe__infodata {
+	margin-right: 0.64rem;
+	font-weight: 700;
+}
+.forkifyRecipe__infobuttons {
+	display: flex;
+	margin-left: 0.5rem;
+}
+/* MEDIA QUERIES */
+@media screen and (min-width: 500px) {
+	.forkifyRecipe__details {
+		padding: 6.4rem 8rem 3.2rem;
+	}
+}
+@media screen and (min-width: 768px) {
+	.forkifyRecipe__title {
+		font-size: 2.4rem;
+		bottom: 0;
+	}
+}
+@media screen and (min-width: 1000px) {
+	.forkifyRecipeContainer {
+		flex: 1 1 55%;
+		max-width: 55%;
+		min-height: 60rem;
+	}
+	.forkifyRecipe__details {
+		flex-wrap: nowrap;
+	}
+}
+@media screen and (min-width: 1268px) {
+	.forkifyRecipe__preview {
+		transform: scale(1.04) translateY(-1px);
+	}
+}

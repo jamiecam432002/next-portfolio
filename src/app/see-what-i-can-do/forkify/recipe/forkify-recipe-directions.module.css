@@ -1,0 +1,18 @@
+.forkifyRecipe__directions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 6.4rem 6.4rem 8rem;
+}
+.forkifyDirectionsText {
+	font-size: 1.44rem;
+	text-align: center;
+	width: 90%;
+	margin-bottom: 7.2rem;
+	color: #968b87;
+}
+@media screen and (min-width: 1000px) {
+	.forkifyDirectionsText {
+		font-size: 2.4rem;
+	}
+}

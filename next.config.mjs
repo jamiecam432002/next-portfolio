@@ -15,6 +15,9 @@ const nextConfig = {
 			},
 		},
 	},
+	images: {
+		remotePatterns: [new URL('http://forkify-api.herokuapp.com/images/**')],
+	},
 };
 
 export default nextConfig;

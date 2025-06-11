@@ -1,4 +1,4 @@
 import styles from './forkify-likes.module.css';
 export default function ForkifyLikes() {
-	return <div>LIKES</div>;
+	return <div className={styles.forkify__likes}>LIKES</div>;
 }

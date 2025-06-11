@@ -1,0 +1,30 @@
+.forkifyRecipe__ingredients--list-item {
+	display: flex;
+	flex: 1 1 100%;
+	margin-bottom: 1.8rem;
+	line-height: 1.2;
+	font-size: 1.6rem;
+}
+.forkifyRecipe__ingredients--list-icon {
+	height: 2.1rem;
+	width: 2.1rem;
+	fill: #f59a83;
+	border: 1px solid #f59a83;
+	border-radius: 50%;
+	padding: 0.2rem;
+	margin-right: 0.8rem;
+	flex: 0 0 auto;
+	margin-top: 0.16rem;
+}
+.forkifyRecipe__ingredients--ingredient-quantity {
+	margin-right: 0.8rem;
+	flex: 0 0 auto;
+}
+.forkifyRecipe__ingredients--ingredient-name {
+}
+@media screen and (min-width: 660px) {
+	.forkifyRecipe__ingredients--list-item {
+		padding-right: 1.5rem;
+		flex: 1 1 50%;
+	}
+}
