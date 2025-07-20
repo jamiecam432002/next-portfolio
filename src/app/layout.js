@@ -25,7 +25,7 @@ export default async function RootLayout({ children }) {
 					{children}
 				</div>
 
-				<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
+				<GoogleAnalytics gaId='G-0Y8154W05N' />
 			</body>
 		</html>
 	);
