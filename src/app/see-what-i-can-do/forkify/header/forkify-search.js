@@ -11,6 +11,7 @@ export default function ForkifySearch() {
 	function handleSearch(e) {
 		e.preventDefault();
 		getRecipes(query);
+		setQuery('');
 	}
 
 	return (

@@ -20,8 +20,11 @@
 	margin-right: 0.8rem;
 	flex: 0 0 auto;
 }
-.forkifyRecipe__ingredients--ingredient-name {
+.forkifyRecipe__ingredients--ingredient-name,
+.forkifyRecipe__ingredients--ingredient-unit {
+	margin-right: 0.5rem;
 }
+
 @media screen and (min-width: 660px) {
 	.forkifyRecipe__ingredients--list-item {
 		padding-right: 1.5rem;

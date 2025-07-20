@@ -8,21 +8,39 @@ const initialState = {
 	query: '',
 	searchResults: [],
 	recipe: null,
-	isLoading: false,
+	searchIsLoading: false,
+	recipeIsLoading: false,
+	bookmarks: [],
 };
 
 function reducer(state, action) {
 	switch (action.type) {
-		case 'loading':
+		case 'bookmarkRecipe':
 			return {
 				...state,
-				isLoading: true,
+				bookmarks: [...state.bookmarks, action.payload],
+			};
+		case 'searchloading':
+			return {
+				...state,
+				searchIsLoading: true,
+			};
+		case 'recipeloading':
+			return {
+				...state,
+				recipeIsLoading: true,
 			};
 		case 'search/resultsloaded':
 			return {
 				...state,
-				isLoading: false,
+				searchIsLoading: false,
 				searchResults: [...action.payload],
+			};
+		case 'recipe/loaded':
+			return {
+				...state,
+				recipeIsLoading: false,
+				recipe: { ...action.payload },
 			};
 		default:
 			return state;
@@ -30,13 +48,20 @@ function reducer(state, action) {
 }
 
 function ForkifyProvider({ children }) {
-	const [{ query, searchResults, recipe, isLoading }, dispatch] = useReducer(
-		reducer,
-		initialState
-	);
+	const [
+		{
+			query,
+			searchResults,
+			recipe,
+			searchIsLoading,
+			recipeIsLoading,
+			bookmarks,
+		},
+		dispatch,
+	] = useReducer(reducer, initialState);
 
 	const getRecipes = async function (query) {
-		dispatch({ type: 'loading' });
+		dispatch({ type: 'searchloading' });
 		try {
 			const res = await fetch(`${API_URL}?search=${query}&key=${API_KEY}`);
 			const data = await res.json();
@@ -46,7 +71,22 @@ function ForkifyProvider({ children }) {
 		}
 	};
 
-	const getRecipe = async function () {};
+	const getRecipe = async function (recipeId) {
+		if (recipe && recipeId === recipe.id) return;
+		dispatch({ type: 'recipeloading' });
+		try {
+			const res = await fetch(`${API_URL}/${recipeId}?key=${API_KEY}`);
+			const data = await res.json();
+			dispatch({ type: 'recipe/loaded', payload: data.data.recipe });
+		} catch (err) {
+			throw new Error('problem fetching recipes');
+		}
+	};
+
+	const addBookmark = async function (recipe) {
+		dispatch({ type: 'bookmarkRecipe', payload: recipe });
+		//console.log(recipe);
+	};
 
 	return (
 		<ForkifyContext.Provider
@@ -56,7 +96,10 @@ function ForkifyProvider({ children }) {
 				recipe,
 				getRecipes,
 				getRecipe,
-				isLoading,
+				searchIsLoading,
+				recipeIsLoading,
+				bookmarks,
+				addBookmark,
 			}}>
 			{children}
 		</ForkifyContext.Provider>

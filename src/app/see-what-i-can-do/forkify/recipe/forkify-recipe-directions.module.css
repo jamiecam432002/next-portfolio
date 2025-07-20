@@ -11,6 +11,9 @@
 	margin-bottom: 7.2rem;
 	color: #968b87;
 }
+.forkifyPublisher {
+	font-weight: 700;
+}
 @media screen and (min-width: 1000px) {
 	.forkifyDirectionsText {
 		font-size: 2.4rem;
