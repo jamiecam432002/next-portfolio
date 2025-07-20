@@ -2,6 +2,7 @@ import './globals.css';
 import Header from '@/src/ui/header/header';
 import { getAuthenticatedAppForUser } from '../lib/firebase/serverApp';
 import { lato } from '@/src/ui/fonts';
+import { GoogleAnalytics } from '@next/third-parties/google';
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
@@ -23,6 +24,12 @@ export default async function RootLayout({ children }) {
 					<Header initialUser={currentUser?.toJSON()} />
 					{children}
 				</div>
+				{process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID &&
+					process.env.NODE_ENV === 'production' && (
+						<GoogleAnalytics
+							gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}
+						/>
+					)}
 			</body>
 		</html>
 	);
