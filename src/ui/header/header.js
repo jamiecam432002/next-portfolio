@@ -45,57 +45,15 @@ export default function Header({ initialUser }) {
 	};
 
 	return (
-		<>
-			<header className={styles.headerContainer}>
-				<div className={styles.headerLogo}>
-					<HeaderLogo />
-				</div>
-				<div className={styles.headerNav}>
-					<HeaderNav />
-				</div>
-
-				<HireBtn />
-			</header>
-			<div className='hidden'>
-				<Link href='/' className='logo'>
-					<img src='/friendly-eats.svg' alt='FriendlyEats' />
-					Friendly Eats
-				</Link>
-				{user ? (
-					<>
-						<div className='profile'>
-							<p>
-								<img
-									className='profileImage'
-									src={user.photoURL || '/profile.svg'}
-									alt={user.email}
-								/>
-								{user.displayName}
-							</p>
-
-							<div className='menu'>
-								...
-								<ul>
-									<li>{user.displayName}</li>
-
-									<li>
-										<a href='#' onClick={handleSignOut}>
-											Sign Out
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</>
-				) : (
-					<div className='profile'>
-						<a href='#' onClick={handleSignIn}>
-							<img src='/profile.svg' alt='A placeholder user image' />
-							Sign In with Google
-						</a>
-					</div>
-				)}
+		<header className={styles.headerContainer}>
+			<div className={styles.headerLogo}>
+				<HeaderLogo />
 			</div>
-		</>
+			<div className={styles.headerNav}>
+				<HeaderNav />
+			</div>
+
+			<HireBtn />
+		</header>
 	);
 }
