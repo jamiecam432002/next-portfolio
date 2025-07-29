@@ -24,9 +24,8 @@ export default async function RootLayout({ children }) {
 					<Header initialUser={currentUser?.toJSON()} />
 					{children}
 				</div>
-
-				<GoogleAnalytics gaId='G-0Y8154W05N' />
 			</body>
+			<GoogleAnalytics gaId='G-0Y8154W05N' />
 		</html>
 	);
 }
