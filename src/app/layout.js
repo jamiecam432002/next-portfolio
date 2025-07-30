@@ -25,7 +25,7 @@ export default async function RootLayout({ children }) {
 					{children}
 				</div>
 			</body>
-			<GoogleAnalytics gaId='G-0Y8154W05N' />
+			<GoogleAnalytics trackPageViews gaId='G-0Y8154W05N' />
 		</html>
 	);
 }
